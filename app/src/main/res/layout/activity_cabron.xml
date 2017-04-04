@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/wrap_cabron"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.cardgamecounter.CabronActivity">
+
+    <LinearLayout
+        android:id="@+id/activity_cabron"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/cabronTitle"
+            style="@style/GameTitle"
+            android:drawableLeft="@drawable/ic_goat"
+            android:text="@string/cabron" />
+
+        <LinearLayout
+            android:id="@+id/player1"
+            style="@style/CabronPlayerLayout"
+            android:layout_margin="@dimen/marginSmall">
+
+            <LinearLayout
+                android:id="@+id/namePlayer1Line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/avatarPlayer1"
+                    style="@style/PlayerAvatarGamePage"
+                    android:layout_marginRight="@dimen/marginBig"
+                    android:src="@drawable/woman_1"
+                    tools:ignore="contentDescription" />
+
+                <TextView
+                    android:id="@+id/namePlayer1"
+                    style="@style/PlayerNameGamePage"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/player1Hint" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pointsPlayer1"
+                style="@style/Points"
+                android:gravity="start"
+                android:text="@string/cabronInitial" />
+
+            <LinearLayout
+                android:id="@+id/cabronLinePlayer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/cabronCPlayer1"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronC"
+                    android:text="@string/cabron1Button" />
+
+                <Button
+                    android:id="@+id/cabronAPlayer1"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronA"
+                    android:text="@string/cabron2Button" />
+
+                <Button
+                    android:id="@+id/cabronBPlayer1"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronB"
+                    android:text="@string/cabron3Button" />
+
+                <Button
+                    android:id="@+id/cabronRPlayer1"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronR"
+                    android:text="@string/cabron4Button" />
+
+                <Button
+                    android:id="@+id/cabronOPlayer1"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronO"
+                    android:text="@string/cabron5Button" />
+
+                <Button
+                    android:id="@+id/cabronNPlayer1"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronN"
+                    android:text="@string/cabron6Button" />
+
+                <Button
+                    android:id="@+id/cabronAccentPlayer1"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronAccent"
+                    android:text="@string/cabronAccentMarkButton" />
+
+                <Button
+                    android:id="@+id/cabronFemininePlayer1"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronFeminine"
+                    android:text="@string/cabronFeminineMarkButton" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/player2"
+            style="@style/CabronPlayerLayout"
+            android:layout_margin="@dimen/marginSmall">
+
+            <LinearLayout
+                android:id="@+id/namePlayer2Line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/avatarPlayer2"
+                    style="@style/PlayerAvatarGamePage"
+                    android:layout_marginRight="@dimen/marginBig"
+                    android:src="@drawable/man_1"
+                    tools:ignore="contentDescription" />
+
+                <TextView
+                    android:id="@+id/namePlayer2"
+                    style="@style/PlayerNameGamePage"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/player2Hint" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pointsPlayer2"
+                style="@style/Points"
+                android:gravity="start"
+                android:text="@string/cabronInitial" />
+
+            <LinearLayout
+                android:id="@+id/cabronLinePlayer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/cabronCPlayer2"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronC"
+                    android:text="@string/cabron1Button" />
+
+                <Button
+                    android:id="@+id/cabronAPlayer2"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronA"
+                    android:text="@string/cabron2Button" />
+
+                <Button
+                    android:id="@+id/cabronBPlayer2"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronB"
+                    android:text="@string/cabron3Button" />
+
+                <Button
+                    android:id="@+id/cabronRPlayer2"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronR"
+                    android:text="@string/cabron4Button" />
+
+                <Button
+                    android:id="@+id/cabronOPlayer2"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronO"
+                    android:text="@string/cabron5Button" />
+
+                <Button
+                    android:id="@+id/cabronNPlayer2"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronN"
+                    android:text="@string/cabron6Button" />
+
+                <Button
+                    android:id="@+id/cabronAccentPlayer2"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronAccent"
+                    android:text="@string/cabronAccentMarkButton" />
+
+                <Button
+                    android:id="@+id/cabronFemininePlayer2"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronFeminine"
+                    android:text="@string/cabronFeminineMarkButton" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/player3"
+            style="@style/CabronPlayerLayout"
+            android:layout_margin="@dimen/marginSmall"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/namePlayer3Line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/avatarPlayer3"
+                    style="@style/PlayerAvatarGamePage"
+                    android:layout_marginRight="@dimen/marginBig"
+                    android:src="@drawable/woman_2"
+                    tools:ignore="contentDescription" />
+
+                <TextView
+                    android:id="@+id/namePlayer3"
+                    style="@style/PlayerNameGamePage"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/player3Hint" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pointsPlayer3"
+                style="@style/Points"
+                android:gravity="start"
+                android:text="@string/cabronInitial" />
+
+            <LinearLayout
+                android:id="@+id/cabronLinePlayer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/cabronCPlayer3"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronC"
+                    android:text="@string/cabron1Button" />
+
+                <Button
+                    android:id="@+id/cabronAPlayer3"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronA"
+                    android:text="@string/cabron2Button" />
+
+                <Button
+                    android:id="@+id/cabronBPlayer3"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronB"
+                    android:text="@string/cabron3Button" />
+
+                <Button
+                    android:id="@+id/cabronRPlayer3"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronR"
+                    android:text="@string/cabron4Button" />
+
+                <Button
+                    android:id="@+id/cabronOPlayer3"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronO"
+                    android:text="@string/cabron5Button" />
+
+                <Button
+                    android:id="@+id/cabronNPlayer3"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronN"
+                    android:text="@string/cabron6Button" />
+
+                <Button
+                    android:id="@+id/cabronAccentPlayer3"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronAccent"
+                    android:text="@string/cabronAccentMarkButton" />
+
+                <Button
+                    android:id="@+id/cabronFemininePlayer3"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronFeminine"
+                    android:text="@string/cabronFeminineMarkButton" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/player4"
+            style="@style/CabronPlayerLayout"
+            android:layout_margin="@dimen/marginSmall"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/namePlayer4Line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/avatarPlayer4"
+                    style="@style/PlayerAvatarGamePage"
+                    android:layout_marginRight="@dimen/marginBig"
+                    android:src="@drawable/man_2"
+                    tools:ignore="contentDescription" />
+
+                <TextView
+                    android:id="@+id/namePlayer4"
+                    style="@style/PlayerNameGamePage"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/player4Hint" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pointsPlayer4"
+                style="@style/Points"
+                android:gravity="start"
+                android:text="@string/cabronInitial" />
+
+            <LinearLayout
+                android:id="@+id/cabronLinePlayer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/cabronCPlayer4"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronC"
+                    android:text="@string/cabron1Button" />
+
+                <Button
+                    android:id="@+id/cabronAPlayer4"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronA"
+                    android:text="@string/cabron2Button" />
+
+                <Button
+                    android:id="@+id/cabronBPlayer4"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronB"
+                    android:text="@string/cabron3Button" />
+
+                <Button
+                    android:id="@+id/cabronRPlayer4"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronR"
+                    android:text="@string/cabron4Button" />
+
+                <Button
+                    android:id="@+id/cabronOPlayer4"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronO"
+                    android:text="@string/cabron5Button" />
+
+                <Button
+                    android:id="@+id/cabronNPlayer4"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronN"
+                    android:text="@string/cabron6Button" />
+
+                <Button
+                    android:id="@+id/cabronAccentPlayer4"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronAccent"
+                    android:text="@string/cabronAccentMarkButton" />
+
+                <Button
+                    android:id="@+id/cabronFemininePlayer4"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="@dimen/nullDimension"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="cabronFeminine"
+                    android:text="@string/cabronFeminineMarkButton" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/resetButton"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:onClick="reset"
+            android:text="@string/resetButton" />
+
+    </LinearLayout>
+</ScrollView>

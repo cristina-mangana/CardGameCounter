@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/marginNormal"
+    android:background="@color/secondaryDarkText"
+    android:padding="@dimen/marginDialog">
+
+    <ImageView
+        android:id="@+id/imageDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/white_round_background"
+        android:padding="@dimen/marginSmall"
+        android:src="@drawable/ic_congratulation" />
+
+    <TextView
+        android:id="@+id/textDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/marginNormal"
+        android:gravity="center"
+        android:text="@string/congratulations"
+        android:textColor="@color/primaryLightText"
+        android:textSize="@dimen/textSize" />
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.cardgamecounter.MenuActivity">
+
+    <LinearLayout
+        android:id="@+id/activity_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/menu_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mainHead"
+            style="@style/CenteredText"
+            android:gravity="center"
+            android:padding="@dimen/marginNormal"
+            android:text="@string/app_name"
+            android:textColor="@color/primaryLightText"
+            android:textSize="@dimen/headSize" />
+
+        <TextView
+            android:id="@+id/selectGameText"
+            style="@style/CenteredText"
+            android:layout_marginBottom="@dimen/marginBig"
+            android:text="@string/select"
+            android:textColor="@color/primaryLightText"
+            android:textSize="@dimen/subheadSize" />
+
+        <LinearLayout
+            android:id="@+id/games1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/marginNormal">
+
+            <TextView
+                android:id="@+id/chinchon"
+                style="@style/CardSelectionOptions"
+                android:layout_marginRight="@dimen/marginNormal"
+                android:drawableTop="@drawable/ic_crown"
+                android:onClick="chinchon"
+                android:text="@string/chinchon"
+                android:textAllCaps="true" />
+
+            <TextView
+                android:id="@+id/cabron"
+                style="@style/CardSelectionOptions"
+                android:drawableTop="@drawable/ic_goat"
+                android:onClick="cabron"
+                android:text="@string/cabron"
+                android:textAllCaps="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/games2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marginNormal"
+            android:layout_marginRight="@dimen/marginNormal">
+
+            <TextView
+                android:id="@+id/pointBased"
+                style="@style/CardSelectionOptions"
+                android:layout_marginRight="@dimen/marginNormal"
+                android:drawableTop="@drawable/ic_broom"
+                android:onClick="pointBased" />
+
+            <TextView
+                android:id="@+id/gameBased"
+                style="@style/CardSelectionOptions"
+                android:drawableTop="@drawable/ic_podium"
+                android:onClick="gameBased" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/suggestionsText"
+            style="@style/CenteredText"
+            android:layout_marginTop="@dimen/marginBig"
+            android:text="@string/suggestions"
+            android:textColor="@color/primaryDarkText"
+            android:textSize="@dimen/textSize" />
+
+        <TextView
+            android:id="@+id/contactText"
+            style="@style/CenteredText"
+            android:layout_margin="@dimen/marginSmall"
+            android:onClick="mailTo"
+            android:textColor="@color/primaryDarkText"
+            android:textSize="@dimen/textSize" />
+
+    </LinearLayout>
+</ScrollView>

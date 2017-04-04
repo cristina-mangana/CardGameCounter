@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.cardgamecounter.MainActivity">
+
+    <ImageView
+        android:id="@+id/coverImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="matrix"
+        android:src="@drawable/cover_50_cut"
+        tools:ignore="contentDescription" />
+
+    <TextView
+        android:id="@+id/coverTitle"
+        style="@style/CenteredTextRelative"
+        android:layout_marginTop="@dimen/separation"
+        android:gravity="center"
+        android:paddingLeft="@dimen/marginSmall"
+        android:paddingRight="@dimen/marginSmall"
+        android:text="@string/app_name"
+        android:textColor="@color/primaryLightText"
+        android:textSize="@dimen/titleSize" />
+
+    <Button
+        android:id="@+id/startButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/separation"
+        android:onClick="startButton"
+        android:paddingBottom="@dimen/marginNormal"
+        android:paddingLeft="@dimen/marginExtraBig"
+        android:paddingRight="@dimen/marginExtraBig"
+        android:paddingTop="@dimen/marginNormal"
+        android:text="@string/startButton"
+        android:textColor="@color/primaryLightText" />
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">Card Game Counter</string>
+
+    <!--Button strings-->
+    <string name="startButton">GET STARTED</string>
+    <string name="nextButton">NEXT</string>
+    <string name="minus10Button">-10</string>
+    <string name="plusGameButton">+1 GAME</string>
+    <string name="undoButton">UNDO</string>
+    <string name="resetButton">RESET</string>
+    <string name="noButton">NO</string>
+    <string name="yesButton">YES</string>
+    <string name="okButton">OK</string>
+    <string name="keepButton">KEEP</string>
+
+    <!--Cabron Button strings-->
+    <string name="cabron1Button">C</string>
+    <string name="cabron2Button">A</string>
+    <string name="cabron3Button">B</string>
+    <string name="cabron4Button">R</string>
+    <string name="cabron5Button">O</string>
+    <string name="cabron6Button">N</string>
+    <string name="cabronAccentMarkButton">´</string>
+    <string name="cabronFeminineMarkButton">A</string>
+
+    <!--Selection strings-->
+    <string name="select">Select your game</string>
+    <string name="selectPlayers">Select your players</string>
+    <string name="selectGoal">Select your goal</string>
+    <string name="selectReclosures">Select number of reclosures</string>
+
+    <!--Games strings-->
+    <string name="chinchon">chinchón</string>
+    <string name="cabron">tute cabrón</string>
+    <string name="pointGame">Point-based game\n(Escoba)</string>
+    <string name="gameGame">Game-based game\n(Brisca, Tute&#8230;)</string>
+    <string name="pointGameTitle">Points game</string>
+    <string name="gameGameTitle">Games game</string>
+
+    <string name="suggestions">Do you have any suggestions?</string>
+    <string name="contact">Please contact us</string>
+
+    <!--Hint strings-->
+    <string name="player1Hint">Player1</string>
+    <string name="player2Hint">Player2</string>
+    <string name="player3Hint">Player3</string>
+    <string name="player4Hint">Player4</string>
+    <string name="enterPointsHint">0</string>
+    <string name="cabronInitial">-</string>
+
+    <!--Goal strings-->
+    <string name="goal5">5</string>
+    <string name="goal10">10</string>
+    <string name="goal20">20</string>
+    <string name="goal30">30</string>
+    <string name="goal40">40</string>
+
+    <!--Reclosures strings-->
+    <string name="reclosure0">0</string>
+    <string name="reclosure1">1</string>
+    <string name="reclosure2">2</string>
+    <string name="reclosure3">3</string>
+
+    <!--Content Description strings-->
+    <string name="avatar1">Avatar for Player 1</string>
+    <string name="avatar2">Avatar for Player 2</string>
+    <string name="avatar3">Avatar for Player 3</string>
+    <string name="avatar4">Avatar for Player 4</string>
+    <string name="add3">Add Player 3</string>
+    <string name="add4">Add Player 4</string>
+    <string name="enterPoints">Enter points button</string>
+
+    <!--Messages strings-->
+    <string name="woohoo">Woohoo!</string>
+    <string name="congratulations">has won! Congratulations</string>
+    <string name="ohno">Oh no!</string>
+    <string name="defeated">has been defeated!</string>
+    <string name="reclose">has lost. Do you want to reclose?</string>
+
+</resources>

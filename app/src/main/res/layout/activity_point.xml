@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/wrap_point"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.cardgamecounter.PointActivity">
+
+    <LinearLayout
+        android:id="@+id/activity_point"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/pointTitle"
+            style="@style/GameTitle"
+            android:drawableLeft="@drawable/ic_broom"
+            android:text="@string/pointGameTitle" />
+
+        <LinearLayout
+            android:id="@+id/playersLine1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/marginSmall">
+
+            <LinearLayout
+                android:id="@+id/player1"
+                style="@style/PlayerLayout"
+                android:layout_marginRight="@dimen/marginSmall">
+
+                <LinearLayout
+                    android:id="@+id/namePlayer1Line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/avatarPlayer1"
+                        style="@style/PlayerAvatarGamePage"
+                        android:src="@drawable/woman_1"
+                        tools:ignore="contentDescription" />
+
+                    <TextView
+                        android:id="@+id/namePlayer1"
+                        style="@style/PlayerNameGamePage"
+                        android:text="@string/player1Hint" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/pointsPlayer1"
+                    style="@style/Points"
+                    android:text="@string/enterPointsHint" />
+
+                <LinearLayout
+                    android:id="@+id/plusPointsPlayer1Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/plusPointsPlayer1"
+                        style="@style/PointsEditText"
+                        android:hint="@string/enterPointsHint" />
+
+                    <ImageButton
+                        android:id="@+id/sendPointsPlayer1"
+                        style="@style/SendPoints"
+                        android:contentDescription="@string/enterPoints"
+                        android:onClick="sendPoints"
+                        android:src="@drawable/ic_send_white" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/undoPlayer1"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="undo"
+                    android:text="@string/undoButton" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/player2"
+                style="@style/PlayerLayout">
+
+                <LinearLayout
+                    android:id="@+id/namePlayer2Line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/avatarPlayer2"
+                        style="@style/PlayerAvatarGamePage"
+                        android:src="@drawable/man_1"
+                        tools:ignore="contentDescription" />
+
+                    <TextView
+                        android:id="@+id/namePlayer2"
+                        style="@style/PlayerNameGamePage"
+                        android:text="@string/player2Hint" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/pointsPlayer2"
+                    style="@style/Points"
+                    android:text="@string/enterPointsHint" />
+
+                <LinearLayout
+                    android:id="@+id/plusPointsPlayer2Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/plusPointsPlayer2"
+                        style="@style/PointsEditText"
+                        android:hint="@string/enterPointsHint" />
+
+                    <ImageButton
+                        android:id="@+id/sendPointsPlayer2"
+                        style="@style/SendPoints"
+                        android:contentDescription="@string/enterPoints"
+                        android:onClick="sendPoints"
+                        android:src="@drawable/ic_send_white" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/undoPlayer2"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="undo"
+                    android:text="@string/undoButton" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/playersLine2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/marginSmall"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/player3"
+                style="@style/PlayerLayout"
+                android:layout_marginRight="@dimen/marginSmall"
+                android:visibility="invisible">
+
+                <LinearLayout
+                    android:id="@+id/namePlayer3Line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/avatarPlayer3"
+                        style="@style/PlayerAvatarGamePage"
+                        android:src="@drawable/woman_2"
+                        tools:ignore="contentDescription" />
+
+                    <TextView
+                        android:id="@+id/namePlayer3"
+                        style="@style/PlayerNameGamePage"
+                        android:text="@string/player3Hint" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/pointsPlayer3"
+                    style="@style/Points"
+                    android:text="@string/enterPointsHint" />
+
+                <LinearLayout
+                    android:id="@+id/plusPointsPlayer3Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/plusPointsPlayer3"
+                        style="@style/PointsEditText"
+                        android:hint="@string/enterPointsHint" />
+
+                    <ImageButton
+                        android:id="@+id/sendPointsPlayer3"
+                        style="@style/SendPoints"
+                        android:contentDescription="@string/enterPoints"
+                        android:onClick="sendPoints"
+                        android:src="@drawable/ic_send_white" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/undoPlayer3"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="undo"
+                    android:text="@string/undoButton" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/player4"
+                style="@style/PlayerLayout"
+                android:visibility="invisible">
+
+                <LinearLayout
+                    android:id="@+id/namePlayer4Line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/avatarPlayer4"
+                        style="@style/PlayerAvatarGamePage"
+                        android:src="@drawable/man_2"
+                        tools:ignore="contentDescription" />
+
+                    <TextView
+                        android:id="@+id/namePlayer4"
+                        style="@style/PlayerNameGamePage"
+                        android:text="@string/player4Hint" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/pointsPlayer4"
+                    style="@style/Points"
+                    android:text="@string/enterPointsHint" />
+
+                <LinearLayout
+                    android:id="@+id/plusPointsPlayer4Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/plusPointsPlayer4"
+                        style="@style/PointsEditText"
+                        android:hint="@string/enterPointsHint" />
+
+                    <ImageButton
+                        android:id="@+id/sendPointsPlayer4"
+                        style="@style/SendPoints"
+                        android:contentDescription="@string/enterPoints"
+                        android:onClick="sendPoints"
+                        android:src="@drawable/ic_send_white" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/undoPlayer4"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="undo"
+                    android:text="@string/undoButton" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/resetButton"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:onClick="reset"
+            android:text="@string/resetButton" />
+    </LinearLayout>
+</ScrollView>

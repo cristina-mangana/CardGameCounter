@@ -1,0 +1,149 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Game selection cards style. -->
+    <style name="CardSelectionOptions">
+        <item name="android:layout_width">@dimen/nullDimension</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/card_background</item>
+        <item name="android:drawablePadding">@dimen/marginNormal</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:padding">@dimen/marginNormal</item>
+        <item name="android:textColor">@color/primaryDarkText</item>
+    </style>
+
+    <!-- Player avatar style. -->
+    <style name="PlayerAvatar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">@dimen/marginBig</item>
+        <item name="android:background">@drawable/round_background</item>
+    </style>
+
+    <!-- TextEdit player name style. -->
+    <style name="PlayerEditText">
+        <item name="android:layout_width">@dimen/nullDimension</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:inputType">text</item>
+    </style>
+
+    <style name="LinearLayoutBottomSheet">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">@dimen/marginNormal</item>
+        <item name="android:paddingLeft">@dimen/marginNormal</item>
+        <item name="android:paddingRight">@dimen/marginNormal</item>
+    </style>
+
+    <!-- Adding player button style. -->
+    <style name="AddPlayer">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">@dimen/marginBig</item>
+        <item name="android:background">@drawable/round_background_button</item>
+        <item name="android:src">@drawable/ic_add_white</item>
+    </style>
+
+    <!-- Game title style. -->
+    <style name="GameTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:drawablePadding">@dimen/marginNormal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/marginSmall</item>
+        <item name="android:textColor">@color/primaryLightText</item>
+        <item name="android:textSize">@dimen/headSize</item>
+    </style>
+
+    <!-- Player layout style. -->
+    <style name="PlayerLayout">
+        <item name="android:layout_width">@dimen/nullDimension</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/player_background</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">@dimen/marginSmall</item>
+    </style>
+
+    <!-- Player layout Cabron style. -->
+    <style name="CabronPlayerLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/player_background</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">@dimen/marginSmall</item>
+    </style>
+
+    <!-- Player avatar in game page style. -->
+    <style name="PlayerAvatarGamePage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/round_background</item>
+    </style>
+
+    <!-- Player name in game page style. -->
+    <style name="PlayerNameGamePage">
+        <item name="android:layout_width">@dimen/nullDimension</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/primaryDarkText</item>
+        <item name="android:textSize">@dimen/nameSize</item>
+    </style>
+
+    <!-- Points style. -->
+    <style name="Points">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:padding">@dimen/marginSmall</item>
+        <item name="android:textSize">@dimen/subheadSize</item>
+    </style>
+
+    <!-- TextEdit add points style. -->
+    <style name="PointsEditText">
+        <item name="android:layout_width">@dimen/nullDimension</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginLeft">@dimen/marginSmall</item>
+        <item name="android:layout_marginRight">@dimen/marginSmall</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:inputType">number</item>
+    </style>
+
+    <!-- Send points button style. -->
+    <style name="SendPoints">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/round_background_button</item>
+        <item name="android:padding">@dimen/marginExtraSmall</item>
+    </style>
+
+    <style name="CenteredText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <style name="CenteredTextRelative">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+</resources>

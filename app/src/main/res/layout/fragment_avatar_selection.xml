@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/secondaryDarkText"
+        android:padding="@dimen/marginNormal">
+
+        <ImageView
+            android:id="@+id/woman1"
+            style="@style/PlayerAvatar"
+            android:src="@drawable/woman_1" />
+
+        <ImageView
+            android:id="@+id/woman2"
+            style="@style/PlayerAvatar"
+            android:src="@drawable/woman_2" />
+
+        <ImageView
+            android:id="@+id/woman3"
+            style="@style/PlayerAvatar"
+            android:src="@drawable/woman_3" />
+
+        <ImageView
+            android:id="@+id/woman4"
+            style="@style/PlayerAvatar"
+            android:src="@drawable/woman_4" />
+
+        <ImageView
+            android:id="@+id/woman5"
+            style="@style/PlayerAvatar"
+            android:src="@drawable/woman_5" />
+
+        <ImageView
+            android:id="@+id/woman6"
+            style="@style/PlayerAvatar"
+            android:src="@drawable/woman_6" />
+
+        <ImageView
+            android:id="@+id/woman7"
+            style="@style/PlayerAvatar"
+            android:src="@drawable/woman_7" />
+
+        <ImageView
+            android:id="@+id/woman8"
+            style="@style/PlayerAvatar"
+            android:src="@drawable/woman_8" />
+
+        <ImageView
+            android:id="@+id/woman9"
+            style="@style/PlayerAvatar"
+            android:src="@drawable/woman_9" />
+
+        <ImageView
+            android:id="@+id/woman10"
+            style="@style/PlayerAvatar"
+            android:src="@drawable/woman_10" />
+
+        <ImageView
+            android:id="@+id/man1"
+            style="@style/PlayerAvatar"
+            android:src="@drawable/man_1" />
+
+        <ImageView
+            android:id="@+id/man2"
+            style="@style/PlayerAvatar"
+            android:src="@drawable/man_2" />
+
+        <ImageView
+            android:id="@+id/man3"
+            style="@style/PlayerAvatar"
+            android:src="@drawable/man_3" />
+
+        <ImageView
+            android:id="@+id/man4"
+            style="@style/PlayerAvatar"
+            android:src="@drawable/man_4" />
+
+        <ImageView
+            android:id="@+id/man5"
+            style="@style/PlayerAvatar"
+            android:src="@drawable/man_5" />
+
+        <ImageView
+            android:id="@+id/man6"
+            style="@style/PlayerAvatar"
+            android:src="@drawable/man_6" />
+
+        <ImageView
+            android:id="@+id/man7"
+            style="@style/PlayerAvatar"
+            android:src="@drawable/man_7" />
+
+        <ImageView
+            android:id="@+id/man8"
+            style="@style/PlayerAvatar"
+            android:src="@drawable/man_8" />
+
+        <ImageView
+            android:id="@+id/man9"
+            style="@style/PlayerAvatar"
+            android:src="@drawable/man_9" />
+
+        <ImageView
+            android:id="@+id/man10"
+            style="@style/PlayerAvatar"
+            android:src="@drawable/man_10" />
+
+    </LinearLayout>
+
+</HorizontalScrollView>
