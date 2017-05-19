@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Name [NO TRANSLATION]-->
+    <string name="app_name">Card Game Counter</string>
+
+    <!--Button strings [CHAR LIMIT=15]-->
+    <string name="startButton">EMPEZA</string>
+    <string name="nextButton">SEGUINTE</string>
+    <string name="plusGameButton">+1 PARTIDA</string>
+    <string name="undoButton">DESFACER</string>
+    <string name="resetButton">RESET</string>
+    <string name="noButton">NON</string>
+    <string name="yesButton">SI</string>
+    <string name="okButton">OK</string>
+    <string name="keepButton">SEGUIR</string>
+
+    <!--Selection strings [CHAR LIMIT=30]-->
+    <string name="select">Elixe o xogo</string>
+    <string name="selectPlayers">Elixe os xogadores</string>
+    <string name="selectGoal">A canto ides?</string>
+    <string name="selectReclosures">Con cantos reenganches?</string>
+
+    <!--Games strings-->
+    <!--[CHAR LIMIT=30 / BOTH MUST HAVE SIMILAR LENGTH]-->
+    <string name="pointGame">Por puntos</string>
+    <string name="gameGame">Por partidas</string>
+    <!--[CHAR LIMIT=12]-->
+    <string name="pointGameTitle">Por puntos</string>
+    <string name="gameGameTitle">Por xogos</string>
+
+    <!--[CHAR LIMIT=NONE]-->
+    <string name="suggestions">Tes algunha suxerencia?</string>
+    <string name="contact">Contáctanos!</string>
+
+    <!--Hint strings [CHAR LIMIT=7]-->
+    <string name="player1Hint">Xog1</string>
+    <string name="player2Hint">Xog2</string>
+    <string name="player3Hint">Xog3</string>
+    <string name="player4Hint">Xog4</string>
+
+    <!--Content Description strings [CHAR LIMIT=NONE]-->
+    <string name="avatar1">Avatar do Xogador 1</string>
+    <string name="avatar2">Avatar do Xogador 2</string>
+    <string name="avatar3">Avatar do Xogador 3</string>
+    <string name="avatar4">Avatar do Xogador 4</string>
+    <string name="add3">Engade Xogador 3</string>
+    <string name="add4">Engade Xogador 4</string>
+    <string name="enterPoints">Botón de entrada de puntos</string>
+
+    <!--Messages strings [CHAR LIMIT=NONE]-->
+    <string name="woohoo">Xenial!</string>
+    <string name="congratulations">gañou! Parabéns</string>
+    <string name="ohno">Oh non!</string>
+    <string name="defeated">foi derrotado!</string>
+    <string name="reclose">perdeu. Queres reenganchar?</string>
+
+</resources>

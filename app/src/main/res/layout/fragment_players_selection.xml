@@ -14,18 +14,11 @@
         android:textSize="@dimen/subheadSize" />
 
     <LinearLayout
-        android:id="@+id/playerLine1"
         style="@style/LinearLayoutBottomSheet">
 
         <Spinner
             android:id="@+id/playerIcon1Spinner"
             style="@style/PlayerAvatar" />
-
-        <!--<ImageView
-            android:id="@+id/playerIcon1"
-            style="@style/PlayerAvatar"
-            android:contentDescription="@string/avatar1"
-            android:src="@drawable/woman_1" />-->
 
         <EditText
             android:id="@+id/playerName1"
@@ -47,12 +40,6 @@
                 style="@style/PlayerAvatar"
                 android:layout_marginLeft="@dimen/marginBig" />
 
-            <!--<ImageView
-                android:id="@+id/playerIcon3"
-                style="@style/PlayerAvatar"
-                android:layout_marginLeft="@dimen/marginBig"
-                android:contentDescription="@string/avatar3"
-                android:src="@drawable/man_2" />-->
         </ViewFlipper>
 
         <EditText
@@ -64,18 +51,11 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/playerLine2"
         style="@style/LinearLayoutBottomSheet">
 
         <Spinner
             android:id="@+id/playerIcon2Spinner"
             style="@style/PlayerAvatar" />
-
-        <!--<ImageView
-            android:id="@+id/playerIcon2"
-            style="@style/PlayerAvatar"
-            android:contentDescription="@string/avatar2"
-            android:src="@drawable/man_1" />-->
 
         <EditText
             android:id="@+id/playerName2"
@@ -98,12 +78,6 @@
                 style="@style/PlayerAvatar"
                 android:layout_marginLeft="@dimen/marginBig" />
 
-            <!--<ImageView
-                android:id="@+id/playerIcon4"
-                style="@style/PlayerAvatar"
-                android:layout_marginLeft="@dimen/marginBig"
-                android:contentDescription="@string/avatar4"
-                android:src="@drawable/woman_2" />-->
         </ViewFlipper>
 
         <EditText
@@ -128,7 +102,6 @@
         android:gravity="center_horizontal">
 
         <ImageView
-            android:id="@+id/goalIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/marginBig"
@@ -192,7 +165,6 @@
         android:visibility="gone">
 
         <ImageView
-            android:id="@+id/reclosureIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/marginBig"

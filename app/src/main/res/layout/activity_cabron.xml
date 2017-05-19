@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/wrap_cabron"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.android.cardgamecounter.CabronActivity">
 
     <LinearLayout
-        android:id="@+id/activity_cabron"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -24,7 +22,6 @@
             android:layout_margin="@dimen/marginSmall">
 
             <LinearLayout
-                android:id="@+id/namePlayer1Line"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -50,7 +47,6 @@
                 android:text="@string/cabronInitial" />
 
             <LinearLayout
-                android:id="@+id/cabronLinePlayer1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -136,7 +132,6 @@
             android:layout_margin="@dimen/marginSmall">
 
             <LinearLayout
-                android:id="@+id/namePlayer2Line"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -162,7 +157,6 @@
                 android:text="@string/cabronInitial" />
 
             <LinearLayout
-                android:id="@+id/cabronLinePlayer2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -249,7 +243,6 @@
             android:visibility="gone">
 
             <LinearLayout
-                android:id="@+id/namePlayer3Line"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -275,7 +268,6 @@
                 android:text="@string/cabronInitial" />
 
             <LinearLayout
-                android:id="@+id/cabronLinePlayer3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -362,7 +354,6 @@
             android:visibility="gone">
 
             <LinearLayout
-                android:id="@+id/namePlayer4Line"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -388,7 +379,6 @@
                 android:text="@string/cabronInitial" />
 
             <LinearLayout
-                android:id="@+id/cabronLinePlayer4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 

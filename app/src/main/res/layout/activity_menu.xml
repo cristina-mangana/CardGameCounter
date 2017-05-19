@@ -26,7 +26,6 @@
         android:textSize="@dimen/subheadSize" />
 
     <LinearLayout
-        android:id="@+id/games1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/marginNormal">
@@ -50,7 +49,6 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/games2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/marginNormal"
@@ -83,6 +81,7 @@
         style="@style/CenteredText"
         android:layout_margin="@dimen/marginSmall"
         android:onClick="mailTo"
+        android:text="@string/contact"
         android:textColor="@color/primaryDarkText"
         android:textSize="@dimen/textSize" />
 

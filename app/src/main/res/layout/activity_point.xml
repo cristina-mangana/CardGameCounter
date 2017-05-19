@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/wrap_point"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.android.cardgamecounter.PointActivity">
 
     <LinearLayout
-        android:id="@+id/activity_point"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusable="true"
@@ -21,7 +19,6 @@
             android:text="@string/pointGameTitle" />
 
         <LinearLayout
-            android:id="@+id/playersLine1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/marginSmall">
@@ -32,7 +29,6 @@
                 android:layout_marginRight="@dimen/marginSmall">
 
                 <LinearLayout
-                    android:id="@+id/namePlayer1Line"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -54,7 +50,6 @@
                     android:text="@string/enterPointsHint" />
 
                 <LinearLayout
-                    android:id="@+id/plusPointsPlayer1Layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -76,6 +71,7 @@
                     style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:enabled="false"
                     android:onClick="undo"
                     android:text="@string/undoButton" />
 
@@ -86,7 +82,6 @@
                 style="@style/PlayerLayout">
 
                 <LinearLayout
-                    android:id="@+id/namePlayer2Line"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -108,7 +103,6 @@
                     android:text="@string/enterPointsHint" />
 
                 <LinearLayout
-                    android:id="@+id/plusPointsPlayer2Layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -130,6 +124,7 @@
                     style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:enabled="false"
                     android:onClick="undo"
                     android:text="@string/undoButton" />
 
@@ -137,7 +132,6 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/playersLine2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/marginSmall"
@@ -150,7 +144,6 @@
                 android:visibility="invisible">
 
                 <LinearLayout
-                    android:id="@+id/namePlayer3Line"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -172,7 +165,6 @@
                     android:text="@string/enterPointsHint" />
 
                 <LinearLayout
-                    android:id="@+id/plusPointsPlayer3Layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -194,6 +186,7 @@
                     style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:enabled="false"
                     android:onClick="undo"
                     android:text="@string/undoButton" />
 
@@ -205,7 +198,6 @@
                 android:visibility="invisible">
 
                 <LinearLayout
-                    android:id="@+id/namePlayer4Line"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -227,7 +219,6 @@
                     android:text="@string/enterPointsHint" />
 
                 <LinearLayout
-                    android:id="@+id/plusPointsPlayer4Layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -249,6 +240,7 @@
                     style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:enabled="false"
                     android:onClick="undo"
                     android:text="@string/undoButton" />
 

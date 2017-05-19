@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         textViewCoverTitle.setTypeface(typeFacePermanentMarker);
     }
 
-    //Open menu activity
+    //This method opens menu activity https://developer.android.com/training/basics/firstapp/starting-activity.html
     public void startButton (View view) {
         Intent openActivityMenu = new Intent(this,MenuActivity.class);
         startActivity(openActivityMenu);

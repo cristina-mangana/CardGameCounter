@@ -20,6 +20,10 @@ import android.widget.ViewFlipper;
 /**
  * Created by Cristina on 30/03/2017.
  * The objective of this class is to inflate the selection layout to a bottom sheet.
+ * Info and inspiration taken from:
+ * http://www.androidauthority.com/bottom-sheets-707252/
+ * http://www.sgoliver.net/blog/bottom-sheets-en-android/
+ * http://saulmm.github.io/from-design-to-android-part1
  */
 public class BottomSheetPlayersSelection extends BottomSheetDialogFragment {
 
@@ -37,6 +41,7 @@ public class BottomSheetPlayersSelection extends BottomSheetDialogFragment {
         TextView textViewSelectReclosures = (TextView) contentView.findViewById(R.id.selectReclosuresText);
         LinearLayout reclosuresLayout = (LinearLayout) contentView.findViewById(R.id.reclosuresLine);
 
+        //Customize sheet depending on the selected game
         if (gameSelected == "chinchon") {
             textViewSelectGoal.setVisibility(View.GONE);
             goalLayout.setVisibility(View.GONE);
@@ -50,6 +55,7 @@ public class BottomSheetPlayersSelection extends BottomSheetDialogFragment {
             goalLayout.setVisibility(View.VISIBLE);
         }
 
+        //Customize spinners
         final Spinner spinnerPlayer1 = (Spinner) contentView.findViewById(R.id.playerIcon1Spinner);
         final Spinner spinnerPlayer2 = (Spinner) contentView.findViewById(R.id.playerIcon2Spinner);
         final Spinner spinnerPlayer3 = (Spinner) contentView.findViewById(R.id.playerIcon3Spinner);
@@ -79,15 +85,7 @@ public class BottomSheetPlayersSelection extends BottomSheetDialogFragment {
         textViewSelectGoal.setTypeface(typeFaceRobotoMedium);
         textViewSelectReclosures.setTypeface(typeFaceRobotoMedium);
 
-        /*ImageView imageViewPlayerIcon1 = (ImageView) contentView.findViewById(playerIcon1);
-        imageViewPlayerIcon1.setOnClickListener(this);
-        ImageView imageViewPlayerIcon2 = (ImageView) contentView.findViewById(playerIcon2);
-        imageViewPlayerIcon2.setOnClickListener(this);
-        ImageView imageViewPlayerIcon3 = (ImageView) contentView.findViewById(playerIcon3);
-        imageViewPlayerIcon3.setOnClickListener(this);
-        ImageView imageViewPlayerIcon4 = (ImageView) contentView.findViewById(playerIcon4);
-        imageViewPlayerIcon4.setOnClickListener(this);*/
-
+        //Next two listeners add new player when it's needed
         ImageView imageViewAddPlayer3 = (ImageView) contentView.findViewById(R.id.playerButton3);
         imageViewAddPlayer3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,6 +118,7 @@ public class BottomSheetPlayersSelection extends BottomSheetDialogFragment {
                 editTextPlayer4.startAnimation(animSlide);
             }
         });
+        //This listener save data and open new activity depending on the selected game
         Button nextButton = (Button) contentView.findViewById(R.id.nextButton);
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -140,6 +139,7 @@ public class BottomSheetPlayersSelection extends BottomSheetDialogFragment {
                 int goalSelected = goalRadioGroup.getCheckedRadioButtonId();
                 RadioGroup reclosuresRadioGroup = (RadioGroup) contentView.findViewById(R.id.reclosure_radio_group);
                 int reclosures = reclosuresRadioGroup.getCheckedRadioButtonId();
+                //http://stackoverflow.com/questions/2091465/how-do-i-pass-data-between-activities-in-android-application
                 switch (gameSelected) {
                     case "chinchon":
                         Intent openActivityChinchon = new Intent(getContext(), ChinchonActivity.class);
@@ -299,11 +299,4 @@ public class BottomSheetPlayersSelection extends BottomSheetDialogFragment {
         super.onSaveInstanceState(savedInstanceState);
     }
 
-    /*@Override
-    public void onClick(View v) {
-        int idSelected = v.getId();
-        DialogFragment avatarsSelection = new DialogFragmentAvatarsSelection();
-        avatarsSelection.show(getActivity().getSupportFragmentManager(),"avatarsSelection");
-        }
-    }*/
 }

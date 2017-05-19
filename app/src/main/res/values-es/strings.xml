@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Button strings [CHAR LIMIT=15]-->
+    <string name="startButton">EMPIEZA</string>
+    <string name="nextButton">SIGUIENTE</string>
+    <string name="plusGameButton">+1 PARTIDA</string>
+    <string name="undoButton">DESHACER</string>
+    <string name="resetButton">RESET</string>
+    <string name="noButton">NO</string>
+    <string name="yesButton">SI</string>
+    <string name="okButton">OK</string>
+    <string name="keepButton">SEGUIR</string>
+
+    <!--Selection strings [CHAR LIMIT=30]-->
+    <string name="select">Elige el juego</string>
+    <string name="selectPlayers">Elige los jugadores</string>
+    <string name="selectGoal">¿A cuánto vais?</string>
+    <string name="selectReclosures">¿Con cuántos reenganches?</string>
+
+    <!--Games strings-->
+    <!--[CHAR LIMIT=30 / BOTH MUST HAVE SIMILAR LENGTH]-->
+    <string name="pointGame">Por puntos</string>
+    <string name="gameGame">Por partidas</string>
+    <!--[CHAR LIMIT=12]-->
+    <string name="pointGameTitle">Por puntos</string>
+    <string name="gameGameTitle">Por juegos</string>
+
+    <!--[CHAR LIMIT=NONE]-->
+    <string name="suggestions">¿Tienes alguna sugerencia?</string>
+    <string name="contact">¡Contáctanos!</string>
+
+    <!--Hint strings [CHAR LIMIT=8]-->
+    <string name="player1Hint">Jug1</string>
+    <string name="player2Hint">Jug2</string>
+    <string name="player3Hint">Jug3</string>
+    <string name="player4Hint">Jug4</string>
+
+    <!--Messages strings [CHAR LIMIT=NONE]-->
+    <string name="woohoo">¡Genial!</string>
+    <string name="congratulations">ha ganado. Felicidades</string>
+    <string name="ohno">¡Oh no!</string>
+    <string name="defeated">ha sido derrotado.</string>
+    <string name="reclose">ha perdido. ¿Quieres reenganchar?</string>
+    <string name="add3">Añade Jugador 3</string>
+    <string name="add4">Añade Jugador 4</string>
+
+    <!--Content Description strings [CHAR LIMIT=NONE]-->
+    <string name="enterPoints">Botón de entrada de puntos</string>
+    <string name="avatar1">Avatar del Jugador 1</string>
+    <string name="avatar2">Avatar del Jugador 2</string>
+    <string name="avatar3">Avatar del Jugador 3</string>
+    <string name="avatar4">Avatar del Jugador 4</string>
+
+    <string name="app_name">Card Game Counter</string>
+
+</resources>

@@ -28,7 +28,7 @@ public class PointActivity extends AppCompatActivity {
     int lastScorePlayer3 = 0;
     int lastScorePlayer4 = 0;
     int goal = 5;
-    boolean isOpened = false;
+    boolean isOpen = false;
     String stringPlayerName;
 
     @Override
@@ -378,7 +378,7 @@ public class PointActivity extends AppCompatActivity {
             Boolean enabledUndoPlayer2 = savedInstanceState.getBoolean("enabledUndoPlayer2");
             Boolean enabledUndoPlayer3 = savedInstanceState.getBoolean("enabledUndoPlayer3");
             Boolean enabledUndoPlayer4 = savedInstanceState.getBoolean("enabledUndoPlayer4");
-            Boolean isOpenedSaved = savedInstanceState.getBoolean("isOpenedSaved");
+            Boolean isOpenSaved = savedInstanceState.getBoolean("isOpenSaved");
             String stringPlayerNameSaved = savedInstanceState.getString("stringPlayerNameSaved");
 
             // Apply stored items
@@ -428,7 +428,7 @@ public class PointActivity extends AppCompatActivity {
                 ImageButton imageButtonPlayer4 = (ImageButton) findViewById(R.id.sendPointsPlayer4);
                 imageButtonPlayer4.setEnabled(false);
             }
-            if (isOpenedSaved) {
+            if (isOpenSaved) {
                 createDialog(stringPlayerNameSaved);
             }
         }
@@ -472,11 +472,12 @@ public class PointActivity extends AppCompatActivity {
         savedInstanceState.putBoolean("enabledUndoPlayer2",enabledUndoPlayer2);
         savedInstanceState.putBoolean("enabledUndoPlayer3",enabledUndoPlayer3);
         savedInstanceState.putBoolean("enabledUndoPlayer4",enabledUndoPlayer4);
-        savedInstanceState.putBoolean("isOpenedSaved",isOpened);
+        savedInstanceState.putBoolean("isOpenSaved",isOpen);
         savedInstanceState.putString("stringPlayerNameSaved",stringPlayerName);
         super.onSaveInstanceState(savedInstanceState);
     }
 
+    //This method adds the written points to the score and looks if goal is reached
     public void sendPoints (View view) {
         int player = view.getId();
         int addPoints;
@@ -556,6 +557,7 @@ public class PointActivity extends AppCompatActivity {
         }
     }
 
+    //This method undo last change (only one undo click it's allowed)
     public void undo (View view) {
         int player = view.getId();
         switch (player) {
@@ -584,6 +586,7 @@ public class PointActivity extends AppCompatActivity {
         undoButton.setEnabled(false);
     }
 
+    //This method resets all scores
     public void reset (View view) {
         scorePlayer1 = 0;
         scorePlayer2 = 0;
@@ -604,7 +607,7 @@ public class PointActivity extends AppCompatActivity {
         ImageButton imageButtonPlayer1 = (ImageButton) findViewById(R.id.sendPointsPlayer1);
         imageButtonPlayer1.setEnabled(true);
         Button undoPlayer1Button = (Button) findViewById(R.id.undoPlayer1);
-        undoPlayer1Button.setEnabled(true);
+        undoPlayer1Button.setEnabled(false);
         LinearLayout linearLayoutPlayer2 = (LinearLayout) findViewById(R.id.player2);
         linearLayoutPlayer2.setBackgroundResource(R.drawable.player_background);
         EditText editTextPlayer2 = (EditText) findViewById(R.id.plusPointsPlayer2);
@@ -612,7 +615,7 @@ public class PointActivity extends AppCompatActivity {
         ImageButton imageButtonPlayer2 = (ImageButton) findViewById(R.id.sendPointsPlayer2);
         imageButtonPlayer2.setEnabled(true);
         Button undoPlayer2Button = (Button) findViewById(R.id.undoPlayer2);
-        undoPlayer2Button.setEnabled(true);
+        undoPlayer2Button.setEnabled(false);
         LinearLayout linearLayoutPlayer3 = (LinearLayout) findViewById(R.id.player3);
         linearLayoutPlayer3.setBackgroundResource(R.drawable.player_background);
         EditText editTextPlayer3 = (EditText) findViewById(R.id.plusPointsPlayer3);
@@ -620,7 +623,7 @@ public class PointActivity extends AppCompatActivity {
         ImageButton imageButtonPlayer3 = (ImageButton) findViewById(R.id.sendPointsPlayer3);
         imageButtonPlayer3.setEnabled(true);
         Button undoPlayer3Button = (Button) findViewById(R.id.undoPlayer3);
-        undoPlayer3Button.setEnabled(true);
+        undoPlayer3Button.setEnabled(false);
         LinearLayout linearLayoutPlayer4 = (LinearLayout) findViewById(R.id.player4);
         linearLayoutPlayer4.setBackgroundResource(R.drawable.player_background);
         EditText editTextPlayer4 = (EditText) findViewById(R.id.plusPointsPlayer4);
@@ -628,9 +631,14 @@ public class PointActivity extends AppCompatActivity {
         ImageButton imageButtonPlayer4 = (ImageButton) findViewById(R.id.sendPointsPlayer4);
         imageButtonPlayer4.setEnabled(true);
         Button undoPlayer4Button = (Button) findViewById(R.id.undoPlayer4);
-        undoPlayer4Button.setEnabled(true);
+        undoPlayer4Button.setEnabled(false);
     }
 
+    /**
+     * This method creates a dialog showed when a player wins or loses
+     * Info taken from https://developer.android.com/guide/topics/ui/dialogs.html
+     * @param string is the name of the player
+     */
     public void createDialog (final String string) {
         stringPlayerName = string;
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -656,7 +664,7 @@ public class PointActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
-                isOpened = false;
+                isOpen = false;
                 int playerNumber = 0;
                 if (string == stringPlayerName1) {
                     playerNumber = 1;
@@ -674,7 +682,7 @@ public class PointActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
-                isOpened = false;
+                isOpen = false;
                 scorePlayer1 = 0;
                 scorePlayer2 = 0;
                 scorePlayer3 = 0;
@@ -724,9 +732,13 @@ public class PointActivity extends AppCompatActivity {
         // Create the AlertDialog
         AlertDialog dialog = builder.create();
         dialog.show();
-        isOpened = true;
+        isOpen = true;
     }
 
+    /**
+     * This method disables player features once a player has won or been defeated
+     * @param integer is the player number
+     */
     public void disableLayout (int integer) {
         switch (integer) {
             case 1:

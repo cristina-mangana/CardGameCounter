@@ -22,7 +22,7 @@ public class GameActivity extends AppCompatActivity {
     int scorePlayer3 = 0;
     int scorePlayer4 = 0;
     int goal = 5;
-    boolean isOpened = false;
+    boolean isOpen = false;
     String stringPlayerName;
 
     @Override
@@ -372,7 +372,7 @@ public class GameActivity extends AppCompatActivity {
             Boolean enabledUndoPlayer2 = savedInstanceState.getBoolean("enabledUndoPlayer2");
             Boolean enabledUndoPlayer3 = savedInstanceState.getBoolean("enabledUndoPlayer3");
             Boolean enabledUndoPlayer4 = savedInstanceState.getBoolean("enabledUndoPlayer4");
-            Boolean isOpenedSaved = savedInstanceState.getBoolean("isOpenedSaved");
+            Boolean isOpenSaved = savedInstanceState.getBoolean("isOpenSaved");
             String stringPlayerNameSaved = savedInstanceState.getString("stringPlayerNameSaved");
 
             // Apply stored items
@@ -414,7 +414,7 @@ public class GameActivity extends AppCompatActivity {
                 Button buttonPlayer4 = (Button) findViewById(R.id.plusGamePlayer4);
                 buttonPlayer4.setEnabled(false);
             }
-            if (isOpenedSaved) {
+            if (isOpenSaved) {
                 createDialog(stringPlayerNameSaved);
             }
         }
@@ -458,11 +458,12 @@ public class GameActivity extends AppCompatActivity {
         savedInstanceState.putBoolean("enabledUndoPlayer2",enabledUndoPlayer2);
         savedInstanceState.putBoolean("enabledUndoPlayer3",enabledUndoPlayer3);
         savedInstanceState.putBoolean("enabledUndoPlayer4",enabledUndoPlayer4);
-        savedInstanceState.putBoolean("isOpenedSaved",isOpened);
+        savedInstanceState.putBoolean("isOpenSaved",isOpen);
         savedInstanceState.putString("stringPlayerNameSaved",stringPlayerName);
         super.onSaveInstanceState(savedInstanceState);
     }
 
+    //This method adds a game to the player's total score and looks if goal is reached
     public void plusGame (View view) {
         int player = view.getId();
         switch (player) {
@@ -517,6 +518,7 @@ public class GameActivity extends AppCompatActivity {
         }
     }
 
+    //This method undo last change (only one undo click it's allowed)
     public void undo (View view) {
         int player = view.getId();
         switch (player) {
@@ -545,6 +547,7 @@ public class GameActivity extends AppCompatActivity {
         undoButton.setEnabled(false);
     }
 
+    //This method resets all scores
     public void reset (View view) {
         scorePlayer1 = 0;
         scorePlayer2 = 0;
@@ -563,27 +566,32 @@ public class GameActivity extends AppCompatActivity {
         Button buttonPlayer1 = (Button) findViewById(R.id.plusGamePlayer1);
         buttonPlayer1.setEnabled(true);
         Button undoPlayer1Button = (Button) findViewById(R.id.undoPlayer1);
-        undoPlayer1Button.setEnabled(true);
+        undoPlayer1Button.setEnabled(false);
         LinearLayout linearLayoutPlayer2 = (LinearLayout) findViewById(R.id.player2);
         linearLayoutPlayer2.setBackgroundResource(R.drawable.player_background);
         Button buttonPlayer2 = (Button) findViewById(R.id.plusGamePlayer2);
         buttonPlayer2.setEnabled(true);
         Button undoPlayer2Button = (Button) findViewById(R.id.undoPlayer2);
-        undoPlayer2Button.setEnabled(true);
+        undoPlayer2Button.setEnabled(false);
         LinearLayout linearLayoutPlayer3 = (LinearLayout) findViewById(R.id.player3);
         linearLayoutPlayer3.setBackgroundResource(R.drawable.player_background);
         Button buttonPlayer3 = (Button) findViewById(R.id.plusGamePlayer3);
         buttonPlayer3.setEnabled(true);
         Button undoPlayer3Button = (Button) findViewById(R.id.undoPlayer3);
-        undoPlayer3Button.setEnabled(true);
+        undoPlayer3Button.setEnabled(false);
         LinearLayout linearLayoutPlayer4 = (LinearLayout) findViewById(R.id.player4);
         linearLayoutPlayer4.setBackgroundResource(R.drawable.player_background);
         Button buttonPlayer4 = (Button) findViewById(R.id.plusGamePlayer4);
         buttonPlayer4.setEnabled(true);
         Button undoPlayer4Button = (Button) findViewById(R.id.undoPlayer4);
-        undoPlayer4Button.setEnabled(true);
+        undoPlayer4Button.setEnabled(false);
     }
 
+    /**
+     * This method creates a dialog showed when a player wins or loses
+     * Info taken from https://developer.android.com/guide/topics/ui/dialogs.html
+     * @param string is the name of the player
+     */
     public void createDialog (final String string) {
         stringPlayerName = string;
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -609,7 +617,7 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
-                isOpened = false;
+                isOpen = false;
                 int playerNumber = 0;
                 if (string == stringPlayerName1) {
                     playerNumber = 1;
@@ -627,7 +635,7 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
-                isOpened = false;
+                isOpen = false;
                 scorePlayer1 = 0;
                 scorePlayer2 = 0;
                 scorePlayer3 = 0;
@@ -645,33 +653,37 @@ public class GameActivity extends AppCompatActivity {
                 Button buttonPlayer1 = (Button) findViewById(R.id.plusGamePlayer1);
                 buttonPlayer1.setEnabled(true);
                 Button undoPlayer1Button = (Button) findViewById(R.id.undoPlayer1);
-                undoPlayer1Button.setEnabled(true);
+                undoPlayer1Button.setEnabled(false);
                 LinearLayout linearLayoutPlayer2 = (LinearLayout) findViewById(R.id.player2);
                 linearLayoutPlayer2.setBackgroundResource(R.drawable.player_background);
                 Button buttonPlayer2 = (Button) findViewById(R.id.plusGamePlayer2);
                 buttonPlayer2.setEnabled(true);
                 Button undoPlayer2Button = (Button) findViewById(R.id.undoPlayer2);
-                undoPlayer2Button.setEnabled(true);
+                undoPlayer2Button.setEnabled(false);
                 LinearLayout linearLayoutPlayer3 = (LinearLayout) findViewById(R.id.player3);
                 linearLayoutPlayer3.setBackgroundResource(R.drawable.player_background);
                 Button buttonPlayer3 = (Button) findViewById(R.id.plusGamePlayer3);
                 buttonPlayer3.setEnabled(true);
                 Button undoPlayer3Button = (Button) findViewById(R.id.undoPlayer3);
-                undoPlayer3Button.setEnabled(true);
+                undoPlayer3Button.setEnabled(false);
                 LinearLayout linearLayoutPlayer4 = (LinearLayout) findViewById(R.id.player4);
                 linearLayoutPlayer4.setBackgroundResource(R.drawable.player_background);
                 Button buttonPlayer4 = (Button) findViewById(R.id.plusGamePlayer4);
                 buttonPlayer4.setEnabled(true);
                 Button undoPlayer4Button = (Button) findViewById(R.id.undoPlayer4);
-                undoPlayer4Button.setEnabled(true);
+                undoPlayer4Button.setEnabled(false);
             }
         });
         // Create the AlertDialog
         AlertDialog dialog = builder.create();
         dialog.show();
-        isOpened = true;
+        isOpen = true;
     }
 
+    /**
+     * This method disables player features once a player has won or been defeated
+     * @param integer is the player number
+     */
     public void disableLayout (int integer) {
         switch (integer) {
             case 1:

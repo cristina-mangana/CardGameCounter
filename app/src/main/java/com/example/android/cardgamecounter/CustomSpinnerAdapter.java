@@ -10,6 +10,7 @@ import android.widget.ImageView;
 /**
  * Created by Cristina on 01/04/2017.
  * This class is useful to create an image only spinner
+ * Info taken from http://stackoverflow.com/questions/3609231/how-is-it-possible-to-create-a-spinner-with-images-instead-of-text
  */
 
 public class CustomSpinnerAdapter extends ArrayAdapter<Integer> {

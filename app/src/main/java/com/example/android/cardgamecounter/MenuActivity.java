@@ -23,23 +23,21 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        //Linkify part of the text
+        //Linkify text (underline and add link color)
         TextView textViewContact = (TextView) findViewById(R.id.contactText);
         SpannableStringBuilder spannableContact = new SpannableStringBuilder(getString(R.string.contact));
-        spannableContact.setSpan(new UnderlineSpan(), 7, 17, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableContact.setSpan(new UnderlineSpan(), 0, getString(R.string.contact).length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         int linkColor = ResourcesCompat.getColor(getResources(), R.color.colorAccent, null);
-        spannableContact.setSpan(new ForegroundColorSpan(linkColor), 7, 17, 0);
+        spannableContact.setSpan(new ForegroundColorSpan(linkColor), 0, getString(R.string.contact).length(), 0);
         textViewContact.setText(spannableContact);
 
         //Different styles in one text
         TextView textViewPointBased = (TextView) findViewById(R.id.pointBased);
-        String stringPointBased = getString(R.string.pointGame);
-        String upperStringPointBased = stringPointBased.substring(0,16).toUpperCase() + stringPointBased.substring(16,stringPointBased.length());
-        textViewPointBased.setText(upperStringPointBased);
+        String stringPointBased = getString(R.string.pointGame).toUpperCase();
+        textViewPointBased.setText(stringPointBased + getString(R.string.pointGameExample));
         TextView textViewGameBased = (TextView) findViewById(R.id.gameBased);
-        String stringGameBased = getString(R.string.gameGame);
-        String upperStringGameBased = stringGameBased.substring(0,15).toUpperCase() + stringGameBased.substring(15,stringGameBased.length());
-        textViewGameBased.setText(upperStringGameBased);
+        String stringGameBased = getString(R.string.gameGame).toUpperCase();
+        textViewGameBased.setText(stringGameBased + getString(R.string.gameGameExample));
 
         // Set the font's path
         String fontPathPermanentMarker = "fonts/PermanentMarker.ttf";
@@ -61,12 +59,15 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     //Send email opening an email app
-    public void mailTo(View textView) {
+    public void mailTo(View view) {
         String[] address = {"cristina.mangana@gmail.com"};
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
         emailIntent.setData(Uri.parse("mailto:")); // only email apps should handle this
         emailIntent.putExtra(Intent.EXTRA_EMAIL, address);
-        startActivity(emailIntent); //Title for the pop-up menu
+        //Intent is only executed if there's an available mail app in the device
+        if (emailIntent.resolveActivity(getPackageManager()) != null) {
+            startActivity(emailIntent);
+        }
     }
 
     //Open chinchon selection activity

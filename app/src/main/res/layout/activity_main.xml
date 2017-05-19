@@ -7,7 +7,6 @@
     tools:context="com.example.android.cardgamecounter.MainActivity">
 
     <ImageView
-        android:id="@+id/coverImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="matrix"
@@ -25,8 +24,8 @@
         android:textColor="@color/primaryLightText"
         android:textSize="@dimen/titleSize" />
 
+    <!--http://stackoverflow.com/questions/26346727/android-material-design-button-styles-->
     <Button
-        android:id="@+id/startButton"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
