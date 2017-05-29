@@ -19,22 +19,22 @@ import static com.example.android.cardgamecounter.R.layout.dialog;
 
 public class ChinchonActivity extends AppCompatActivity {
 
-    int scorePlayer1 = 0;
-    int scorePlayer2 = 0;
-    int scorePlayer3 = 0;
-    int scorePlayer4 = 0;
-    int lastScorePlayer1 = 0;
-    int lastScorePlayer2 = 0;
-    int lastScorePlayer3 = 0;
-    int lastScorePlayer4 = 0;
-    String dialogType;
-    int totalReclosures = 0;
-    int reclosurePlayer1 = 0;
-    int reclosurePlayer2 = 0;
-    int reclosurePlayer3 = 0;
-    int reclosurePlayer4 = 0;
-    boolean isOpen = false;
-    String stringPlayerName;
+    private int scorePlayer1 = 0;
+    private int scorePlayer2 = 0;
+    private int scorePlayer3 = 0;
+    private int scorePlayer4 = 0;
+    private int lastScorePlayer1 = 0;
+    private int lastScorePlayer2 = 0;
+    private int lastScorePlayer3 = 0;
+    private int lastScorePlayer4 = 0;
+    private String dialogType;
+    private int totalReclosures = 0;
+    private int reclosurePlayer1 = 0;
+    private int reclosurePlayer2 = 0;
+    private int reclosurePlayer3 = 0;
+    private int reclosurePlayer4 = 0;
+    private boolean isOpen = false;
+    private String stringPlayerName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 public class MenuActivity extends AppCompatActivity {
 
-    String gameSelected;
+    private String gameSelected;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

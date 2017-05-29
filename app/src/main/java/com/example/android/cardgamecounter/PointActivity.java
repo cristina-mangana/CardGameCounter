@@ -19,17 +19,17 @@ import static com.example.android.cardgamecounter.R.layout.dialog;
 
 public class PointActivity extends AppCompatActivity {
 
-    int scorePlayer1 = 0;
-    int scorePlayer2 = 0;
-    int scorePlayer3 = 0;
-    int scorePlayer4 = 0;
-    int lastScorePlayer1 = 0;
-    int lastScorePlayer2 = 0;
-    int lastScorePlayer3 = 0;
-    int lastScorePlayer4 = 0;
-    int goal = 5;
-    boolean isOpen = false;
-    String stringPlayerName;
+    private int scorePlayer1 = 0;
+    private int scorePlayer2 = 0;
+    private int scorePlayer3 = 0;
+    private int scorePlayer4 = 0;
+    private int lastScorePlayer1 = 0;
+    private int lastScorePlayer2 = 0;
+    private int lastScorePlayer3 = 0;
+    private int lastScorePlayer4 = 0;
+    private int goal = 5;
+    private boolean isOpen = false;
+    private String stringPlayerName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

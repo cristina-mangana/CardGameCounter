@@ -27,7 +27,7 @@ import android.widget.ViewFlipper;
  */
 public class BottomSheetPlayersSelection extends BottomSheetDialogFragment {
 
-    int numberOfPlayers = 2;
+    private int numberOfPlayers = 2;
 
     @Override
     public void setupDialog(final Dialog dialog, int style) {

@@ -17,18 +17,18 @@ import static com.example.android.cardgamecounter.R.layout.dialog;
 
 public class CabronActivity extends AppCompatActivity {
 
-    String scorePlayer1 = "-";
-    String scorePlayer2 = "-";
-    String scorePlayer3 = "-";
-    String scorePlayer4 = "-";
-    int numberOfPlayers;
-    boolean enabledPlayer1 = false;
-    boolean enabledPlayer2 = false;
-    boolean enabledPlayer3 = false;
-    boolean enabledPlayer4 = false;
-    String dialogType;
-    boolean isOpen = false;
-    String stringPlayerName;
+    private String scorePlayer1 = "-";
+    private String scorePlayer2 = "-";
+    private String scorePlayer3 = "-";
+    private String scorePlayer4 = "-";
+    private int numberOfPlayers;
+    private boolean enabledPlayer1 = false;
+    private boolean enabledPlayer2 = false;
+    private boolean enabledPlayer3 = false;
+    private boolean enabledPlayer4 = false;
+    private String dialogType;
+    private boolean isOpen = false;
+    private String stringPlayerName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
